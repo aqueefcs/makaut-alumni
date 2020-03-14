@@ -586,7 +586,7 @@ figcaption a {
   display: block;
   width: 32px;
   height: 32px;
-  margin-left: 15px;
+  margin-left: 20px;
   background: transparent;
   border: none;
 }
@@ -629,7 +629,7 @@ figcaption a {
 .hamburger.is-closed .hamb-top,
 .hamburger.is-closed .hamb-middle,
 .hamburger.is-closed .hamb-bottom {
-  background-color: #ffffff;
+  background-color: #000000;
 }
 .hamburger.is-closed .hamb-top { 
   top: 5px; 
