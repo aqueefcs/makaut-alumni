@@ -14,7 +14,7 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
 	<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 
 	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
@@ -22,702 +22,84 @@
 	
       <script type = "text/javascript"
          src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-      </script>
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
         integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" 
-        crossorigin="anonymous">
-</script>
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
-
-<style type="text/css">
-	html,
-    body,
-    .view {
-      height: 100%;
-
-    }
-    body {
-
-    }
-    
-    /* Carousel*/
-    .carousel,
-    .carousel-item,
-    .carousel-item.active {
-      height: 100%;
-    }
-    .carousel-inner {
-      height: 100%;
-    }
-    .carousel-item:nth-child(1) {
-      background-image: url("wbut.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-    }
-    .carousel-item:nth-child(2) {
-      background-image: url("wbut.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-    }
-    .carousel-item:nth-child(3) {
-      background-image: url("wbut.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-    }
-	.carousel{
-		position: relative;
-	}
-	.wave {
-		position: absolute;
-		bottom: 0;
-    	z-index: 2;
-	}
-
-	
-	.blob {
-		position: relative;
-		margin: 0px;
-	}
-	.content {
-		background: #a2d9ff3b;
-		position: relative;
-	}
-	/*@media(max-width: 786px){
-		.story {
-			transform: translate(0px,100px);
-		}
-
-	}*/
-	.collapsible-body p{
-			color:#a0522d;
-			font-weight:bold;
-			font-size:25px;
-		}
-			.collapsible-body strong{
-			color:#009999;
-			font-weight:bold;
-			font-size:25px;
-		}
-
-	@media (max-width: 740px){
-		.mem-text {
-			font-size: 40px;
-		}
-		.crown {
-			width: 40px;
-		}
-	}
-
-
-
-a {
-  color: inherit;
-  text-decoration: none
-}
-
-a.link {
-  color: #C4290D
-}
-
-
-
-
-.demo-wrapper {
-  padding: 30px
-}
-
-/*h1 {
-  font-size: 42px;
-  margin: 0;
-  font-weight: 300;
-  margin-bottom: 30px;
-  letter-spacing: -1px;
-  text-align: center
-}*/
-
-.portfolio-items {
-  height: 400px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  margin-bottom: 30px;
-  position: relative
-}
-
-.portfolio-items > li {
-  display: inline-block;
-  vertical-align: top
-}
-
-.item {
-  width: 300px;
-  height: 202px;
-  margin: 150px 20px 0;
-  padding: 5px;
-  border-radius: 2px;
-  background-color: white;
-  font-size: 14px;
-  opacity: 0;
-  position: relative;
-  top: -300px;
-  box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
-  -webkit-transform: rotate(-135deg);
-  -ms-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-  -webkit-transition: all .3s ease, opacity 2s ease,  top 1s ease;
-  -o-transition: all .3s ease, opacity 2s ease,  top 1s ease;
-  transition: all .3s ease, opacity 2s ease,  top 1s ease
-}
-
-.item:nth-child(even) {
-  margin-top: 100px
-}
-
-.item:hover {
-  height: 270px;
-  padding: 15px;
-  -webkit-transform: translateY(-68px);
-  -ms-transform: translateY(-68px);
-  -o-transform: translateY(-68px);
-  transform: translateY(-68px)
-}
-
-.item:hover .date {
-  -webkit-transform: translate3d(0, 61px, 0);
-  -ms-transform: translate3d(0, 61px, 0);
-  -o-transform: translate3d(0, 61px, 0);
-  transform: translate3d(0, 61px, 0)
-}
-
-.item:hover figcaption {
-  -webkit-animation: show .25s ease-in .120s forwards;
-  -o-animation: show .25s ease-in .120s forwards;
-  animation: show .25s ease-in .120s forwards
-}
-
-.item:hover p:nth-of-type(1) span {
-  -webkit-animation: slideOut .25s ease-out .15s forwards;
-  -o-animation: slideOut .25s ease-out .15s forwards;
-  animation: slideOut .25s ease-out .15s forwards
-}
-
-.item:hover p:nth-of-type(2) span {
-  -webkit-animation: slideOut .2s  ease-out .3s forwards;
-  -o-animation: slideOut .2s  ease-out .3s forwards;
-  animation: slideOut .2s  ease-out .3s forwards
-}
-
-.item:hover .view {
-  height: 170px
-}
-
-.item:hover .view img {
-  top: -20px;
-  left: -20px;
-}
-
-.falldown {
-  top: 0;
-  opacity: 1;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  -o-transform: rotate(0);
-  transform: rotate(0)
-}
-
-figure {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/*.view {
-  overflow: hidden;
-  width: 100%;
-  height: 190px;
-  position: relative
-}
-
-.view img {
-  width: 300px;
-  height: 190px;
-  -webkit-transition: width .3s ease;
-  -o-transition: width .3s ease;
-  transition: width .3s ease;
-  position: absolute;
-
-}*/
-
-figcaption {
-  height: 60px;
-  width: 100%;
-  padding: 0;
-  position: absolute;
-  bottom: 0;
-  overflow: hidden;
-  opacity: 0
-}
-
-figcaption p {
-  line-height: 25px !important;
-  font: bold 12px/18px "Arial", sans-serif;
-  text-transform: uppercase;
-  padding: 0 10px;
-  margin: 5px 0;
-  width: 100%;
-  background-color: #f0f0f0;
-  color: #333
-}
-
-figcaption span {
-  left: -100%;
-  opacity: 0
-}
-
-figcaption a {
-  color: #CC320F
-}
-
-.date {
-  z-index: 1;
-  width: 50px;
-  height: 30px;
-  line-height: 30px;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 1px;
-  background-color: #CC320F;
-  position: absolute;
-  bottom: 30px;
-  left: 15px;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.12, 1.6, 0.91, 0.92);
-  -o-transition: -o-transform 0.5s cubic-bezier(0.12, 1.6, 0.91, 0.92);
-  transition: -webkit-transform 0.5s cubic-bezier(0.12, 1.6, 0.91, 0.92);
-  transition: -ms-transform 0.5s cubic-bezier(0.12, 1.6, 0.91, 0.92);
-  transition: -o-transform 0.5s cubic-bezier(0.12, 1.6, 0.91, 0.92);
-  transition: transform 0.5s cubic-bezier(0.12, 1.6, 0.91, 0.92)
-}
-
-@keyframes slideOut {
-  0% {
-    left: -100%;
-    opacity: 0
-  }
-
-  95% {
-    left: 0;
-    opacity: 0.2
-  }
-
-  100% {
-    opacity: 1;
-    left: 0
-  }
-}
-
-@keyframes show {
-  to {
-    opacity: 1
-  }
-}
-
-::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-  cursor: pointer
-}
-
-::-webkit-scrollbar-track {
-  background-color: #ddd;
-  border-radius: 10px
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #C4290D
-}
-
-@-webkit-keyframes slideOut {
-  0% {
-    left: -100%;
-    opacity: 0
-  }
-
-  95% {
-    left: 0;
-    opacity: 0.2
-  }
-
-  100% {
-    opacity: 1;
-    left: 0
-  }
-}
-
-@-o-keyframes slideOut {
-  0% {
-    left: -100%;
-    opacity: 0
-  }
-
-  95% {
-    left: 0;
-    opacity: 0.2
-  }
-
-  100% {
-    opacity: 1;
-    left: 0
-  }
-}
-
-@-webkit-keyframes show {
-  to {
-    opacity: 1
-  }
-}
-
-@-o-keyframes show {
-  to {
-    opacity: 1
-  }
-}
-
-.member {
-	background-color: #1565c0;
-}	
-
-.gov-btn {
-	width: 160px;
-	font-size: 20px;
-}
-
-.archive {
-	background: url('love.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	margin-top: 0px;
-
-}
-.site-container {
-
-  width: 1115px;
-  margin: 0 auto; }
-  @media (max-width: 1250px) {
-    .site-container {
-      width: 90%; } }
-
-.universal-h2 {
-  font-size: 48px;
-  text-align: center;
-  color: #222; }
-  @media (max-width: 1250px) {
-    .universal-h2 {
-      font-size: 38px; } }
-  @media (max-width: 668px) {
-    .universal-h2 {
-      font-size: 30px; } }
-
-.universal-h2-bckg {
-  background-image: url("../images/double-line.svg");
-  background-repeat: no-repeat;
-  background-position: center bottom; }
-
-/* Universal style end */
-/* Includes */
-.site-navigation {
-  position: absolute;
-  background-color: #04116000;
-  width: 100%;
-  z-index: 2; }
-
-.site-navigation-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.main-navigation {
-  color: #fff;
-  display: none;
-  position: fixed;
-  height: 550px;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  background: #000;
-  opacity: 0.9; }
-  .main-navigation .main-navigation__ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 3%;
-    border: 2px solid #fff;
-    border-radius: 7px;
-    background-color: #1b173a; }
-    .main-navigation .main-navigation__ul li {
-      margin-bottom: 20px;
-      list-style: none; }
-    .main-navigation .main-navigation__ul a {
-      color: #fff;
-      font-size: 20px;
-      font-weight: 600;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: 0.3s ease; }
-      /*.main-navigation .main-navigation__ul a:hover {
-        color: #777; }*/
-  @media (max-width: 1150px) {
-    .main-navigation {
-      opacity: 0.94; }
-      .nav-text {
-      	font-size: 40px;
-      }
-       }
-
-/* Navigation burger */
-.burger-container {
-  cursor: pointer;
-  z-index: 3; }
-
-.bar1, .bar2, .bar3 {
-  width: 30px;
-  height: 3px;
-  background-color: #000000;
-  margin: 6px 0;
-  transition: 0.4s; }
-
-.change .bar1 {
-  transform: rotate(-45deg) translate(-6px, 6px);
-  background-color: #c18f59; }
-
-.change .bar2 {
-  opacity: 0;
-  background-color: #c18f59; }
-
-.change .bar3 {
-  transform: rotate(45deg) translate(-6px, -7px);
-  background-color: #c18f59; }
-
-.stop-scroll {
-  overflow: hidden; }
-
-/* Navigation burger end */
-
-
-/* Slider */
-.slick-slider
-{
-    position: relative;
-
-    display: block;
-    box-sizing: border-box;
-
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-        touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list
-{
-    position: relative;
-
-    display: block;
-    overflow: hidden;
-
-    margin: 0;
-    padding: 0;
-}
-.slick-list:focus
-{
-    outline: none;
-}
-.slick-list.dragging
-{
-    cursor: pointer;
-    cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list
-{
-    -webkit-transform: translate3d(0, 0, 0);
-       -moz-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-         -o-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-}
-
-.slick-track
-{
-    position: relative;
-    top: 0;
-    left: 0;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.slick-track:before,
-.slick-track:after
-{
-    display: table;
-
-    content: '';
-}
-.slick-track:after
-{
-    clear: both;
-}
-.slick-loading .slick-track
-{
-    visibility: hidden;
-}
-
-.slick-slide
-{
-    display: none;
-    float: left;
-
-    height: 100%;
-    min-height: 1px;
-}
-[dir='rtl'] .slick-slide
-{
-    float: right;
-}
-.slick-slide img
-{
-    display: block;
-}
-.slick-slide.slick-loading img
-{
-    display: none;
-}
-.slick-slide.dragging img
-{
-    pointer-events: none;
-}
-.slick-initialized .slick-slide
-{
-    display: block;
-}
-.slick-loading .slick-slide
-{
-    visibility: hidden;
-}
-.slick-vertical .slick-slide
-{
-    display: block;
-
-    height: auto;
-
-    border: 1px solid transparent;
-}
-.slick-arrow.slick-hidden {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</style>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<style type="text/css">
+	
+</style>
 <body>
 
+	<div id="wrapper">
+   <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+     <ul class="nav sidebar-nav">
+       <div class="sidebar-header">
+       <div class="sidebar-brand">
+         <a href="#">Makaut Alumni</a></div></div>
+       <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+       <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+       <li><a href="#events"><i class="fas fa-calendar-alt"></i> Events</a></li>
+       <li><a href="#team"><i class="fas fa-users"></i> Members</a></li>
+      <li><a href="#services"><i class="fab fa-forumbee"></i> Forum</a></li>
+      <li><a href="#contact"><i class="fas fa-mobile"></i> Contact</a></li>
+      <li><a href="#followme"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+      <!--li class="dropdown">
+       <a href="#works" class="dropdown-toggle"  data-toggle="dropdown">Works <span class="caret"></span></a>
+     <ul class="dropdown-menu animated fadeInLeft" role="menu">
+      <div class="dropdown-header">Dropdown heading</div>
+      <li><a href="#pictures">Pictures</a></li>
+      <li><a href="#videos">Videeos</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#art">Art</a></li>
+      <li><a href="#awards">Awards</a></li>
+      </ul>
+      </li-->
+      </ul>
+  </nav>
+        <!-- /#sidebar-wrapper -->
 
-		<nav class="site-navigation">
-		<div class="site-navigation-inner site-container">
-			<a href=""><i class="fas fa-sign-in-alt fa-2x black-text"></i> <span style="font-size: 30px;" class="text-dark"> Sign In</span> </a>
-			<div class="main-navigation">
-				
-				<ul class="main-navigation__ul">
-					<li><a href="">Home</a></li>
-					<li><a href="">About Us</a></li>
-					<li><a href="">Members</a></li>
-					<li><a href="">Forum</a></li>
-					<li><a href="">Sign In</a></li>
-					<li><a href="">Contact</a></li>
-				</ul>
-			</div>
-			<div id="myBtn" class="burger-container" onclick="myFunction(this)">
-				<div class="bar1"></div>
-				<div class="bar2"></div>
-				<div class="bar3"></div>
-			</div>
-			<script>
-				function myFunction(x) {
-					x.classList.toggle("change");
-				}
-			</script>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas" style="background-color: #2ab7a900;">
+                <span class="hamb-top"></span>
+    			<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+            </button>
+            
+        </div>
+        <!-- /#page-content-wrapper -->
 
-		</div>
-	</nav>
-	<!-- Navigation end -->
+    </div>
+    <!-- /#wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 <!--nav class="navbar  mb-4 fixed-top blue darken-3">
 
  
@@ -771,8 +153,9 @@ figcaption a {
         <div class="view">
           <div class="full-bg-img flex-center mask rgba-indigo-light white-text">
             <ul class="animated fadeInUp col-md-12 list-unstyled list-inline">
+            	<li class="flex-center"><img src="assets/img/makaut.png" style="width: 150px; height: 150px"></li>
               <li>
-                <h1 class="font-weight-bold text-uppercase">MAULANA ABUL KALAM AZAD UNIVERSITY OF TECHNOLOGY</h1>
+                <h2 class="font-weight-bold text-uppercase">MAULANA ABUL KALAM AZAD UNIVERSITY OF TECHNOLOGY</h2>
               </li>
               <li>
                 <h3 class="font-weight-bold text-uppercase py-4">ALUMNI ASSOCIATION</h3>
@@ -791,8 +174,9 @@ figcaption a {
         <div class="view">
           <div class="full-bg-img flex-center mask rgba-purple-light white-text">
             <ul class="animated fadeInUp col-md-12 list-unstyled">
+            	<li class="flex-center"><img src="assets/img/makaut.png" style="width: 150px; height: 150px"></li>
               <li>
-                <h1 class="font-weight-bold text-uppercase">MAULANA ABUL KALAM AZAD UNIVERSITY OF TECHNOLOGY</h1>
+                <h2 class="font-weight-bold text-uppercase">MAULANA ABUL KALAM AZAD UNIVERSITY OF TECHNOLOGY</h2>
               </li>
               <li>
                 <h3 class="font-weight-bold text-uppercase py-4">ALUMNI ASSOCIATION</h3>
@@ -811,8 +195,9 @@ figcaption a {
         <div class="view">
           <div class="full-bg-img flex-center mask rgba-blue-light white-text">
             <ul class="animated fadeInUp col-md-12 list-unstyled">
+            	<li class="flex-center"><img src="assets/img/makaut.png" style="width: 150px; height: 150px"></li>
               <li>
-                <h1 class="font-weight-bold text-uppercase">Visit our support forum</h1></li>
+                <h2 class="font-weight-bold text-uppercase">Visit our support forum</h2></li>
               <li>
                 <p class="font-weight-bold text-uppercase py-4">Our community can help you with any question</p>
               </li>
@@ -1396,22 +781,42 @@ figcaption a {
    });
 })(jQuery);
 
- 
-
-
-
-
-
-
-
-
-
 		</script>
 	
 
+	<script type="text/javascript">
+			$(document).ready(function () {
+  var trigger = $('.hamburger'),
+      overlay = $('.overlay'),
+     isClosed = false;
 
-		<script src="slick.min.js"></script>
-		<script src="main.js"></script>
+    trigger.click(function () {
+      hamburger_cross();      
+    });
+
+    function hamburger_cross() {
+
+      if (isClosed == true) {          
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {   
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+  }
+  
+  $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+  });  
+});
+	</script>
+
+
+		
 
 	<!-- JQuery -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
